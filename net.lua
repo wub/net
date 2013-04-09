@@ -77,6 +77,7 @@ function propagate_dns()
 
 	-- Generous 10s to receive responses
 	-- will this terminate after a single response?
+	-- need to skeleton this to an async system
 	id, label = rednet.receive(10)
 
 	-- Enforce unique labels
