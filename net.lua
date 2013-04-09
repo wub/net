@@ -1,9 +1,9 @@
 --[[
 
-  DNS SERVER / TRAFFIC DIRECTOR
+	DNS SERVER / TRAFFIC DIRECTOR
 
-	Periodically gathers computer IDs and labels, and tracks the pairs in a 
-	globally accessible	table (via simple API). 
+	Periodically gathers computer IDs and labels, and tracks the pairs in a
+	globally accessible	table (via simple API).
 
 	Either periodically request id:label from each server or only update
 	when pushed to from server? Will test performance of both. Perhaps the
@@ -115,7 +115,7 @@ function boot()
 	while true do
 		event, id, request = os.pullEvent()
 		req = string_split(request, '|')
-		
+
 		target = req[1]
 		cmd = req[2], req[3]
 
@@ -131,15 +131,8 @@ function boot()
 	end
 end
 
--- Perhaps redundant; blind copypasta
 if cycle = false then do
 	boot()
 
 	cycle = true
 end
-
-
---[[--handy functions
-	for k,v in pairs(t) do print(k,v) end
-	for i,v in ipairs(t) do print(i,v) end
-]]

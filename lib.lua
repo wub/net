@@ -1,5 +1,16 @@
+--[[
+
+	Example usage:
+
+	req = '32|cmd|hello'
+	req = req:split('|')
+
+	print(req[2])
+
+]]
+
 function string:split(sep, max, regex)
-  assert(sep ~= '')
+	assert(sep ~= '')
 	assert(max == nil or max >= 1)
 
 	local record = {}
@@ -23,8 +34,8 @@ function string:split(sep, max, regex)
 	return record
 end
 
-req = '32|cmd|hello'
-
-req = req:split('|')
-
-print(req[2])
+--[[
+	-- get by key / get by value
+	for k,v in pairs(t) do print(k,v) end
+	for i,v in ipairs(t) do print(i,v) end
+]]
